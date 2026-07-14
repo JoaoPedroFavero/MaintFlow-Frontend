@@ -47,11 +47,15 @@ npm run preview
 ```
 maintflow-system/
 ├── src/
-│   ├── assets/          # Assets estáticos
+│   ├── assets/          # Assets estáticos (logos, ícones, imagens)
 │   ├── pages/           # Páginas da aplicação
-│   │   └── Home/
-│   │       ├── Index.jsx
-│   │       └── Style.css
+│   │   ├── Home/
+│   │   │   ├── Index.jsx
+│   │   │   └── Style.css
+│   │   └── Dashboard/
+│   │       ├── index.jsx
+│   │       └── style.css
+│   ├── services/        # Serviços e conexões com API
 │   ├── index.css        # Estilos globais
 │   └── main.jsx         # Entry point da aplicação
 ├── index.html           # Template HTML
@@ -64,19 +68,30 @@ maintflow-system/
 ### Paleta de Cores
 
 - **Background Dark**: `#202020`
+- **Background Red Buttons**: `#d11d1d`
+- **Background Dark Red**: `#640000`
+- **Text Gray**: `#595959`
 - **Fonte**: Poppins (sans-serif)
 
-## Funcionalidades Implementadas
+## Screenshots
 
-- [x] Página Home com formulário de login
-- [x] Layout responsivo com flexbox
-- [x] Tema escuro
-- [x] Variáveis CSS para consistência de estilos
+### Home Page
+
+![Home Page](imagens_git/home-maintflow.png)
+
+### Dashboard
+
+O Dashboard é a área do técnico onde serão gerenciadas as ordens de serviço. Inclui:
+- Menu suspenso com opções de navegação
+- Logo centralizada como background
+- Header com título e botão de logout
+
 
 ## 🚧 Em Desenvolvimento
 
-- [ ] Sistema de autenticação
-- [ ] Dashboard de manutenção
-- [ ] Gestão de ordens de serviço
-- [ ] Relatórios e estatísticas
+- ✅ Página Home com formulário de login
+- ✅ Página Dashboard com menu suspenso (Não completo ainda)
+- 🚧 Sistema de autenticação
+- 🚧 Gestão de ordens de serviço
+- 🚧 Relatórios e estatísticas
 

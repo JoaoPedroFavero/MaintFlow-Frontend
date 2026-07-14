@@ -1,5 +1,7 @@
 :root {
     --background-dark: #202020;
+    --background-red-buttons: #d11d1d;
+    --text-gray:#595959;
 }
 
 *{
@@ -8,17 +10,85 @@
 
 body{
     background-color: var(--background-dark);
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
 }
+
+#icone-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.6);
+    opacity: 0.15;
+}
+
 
 .login-container {
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding-top: 35vh;
+    padding-top: 27vh;
+    position: relative;
+    z-index: 1;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.568);
+    border-radius: 25px;
+    max-width: 50%;
+    width: 400px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group label {
+    align-self: center;
+    justify-self: center;
+    font-size: 16px;
+    color: var(--text-gray);
+    font-weight: 400;
+}
+
+.input-group input {
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+}
+
+#login-button {
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    height: 55px;
+    background-color: var(--background-red-buttons);
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+#forgot-pass-link {
+    margin-top: 10px;
+    color: var(--text-gray);
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+        color: var(--background-red-buttons);
+    }
 }

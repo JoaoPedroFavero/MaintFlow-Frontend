@@ -1,0 +1,84 @@
+:root {
+    --background-dark: #202020;
+    --background-red-buttons: #d11d1d;
+    --background-dark-red: #640000;
+    --text-gray:#595959;
+}
+
+*{
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    background-color: var(--background-dark);
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#icone-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0.15;
+}
+
+.dashboard-top-container {
+    position: relative;
+    display: flex;
+    text-justify: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-dark-red);
+    width: 100%;
+
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background-color: transparent;
+  border: none;
+  padding-right: 20px;
+  cursor: pointer;
+  scale: 5;
+  font-weight: bold;
+  color: var(--background-red-buttons);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--text-gray);
+  color: white;
+
+  &:hover {
+    background-color: var(--background-red-buttons);
+  }
+}
