@@ -87,6 +87,7 @@ body{
     color: var(--text-gray);
     cursor: pointer;
     text-align: center;
+    text-decoration: none;
 
     &:hover {
         color: var(--background-red-buttons);

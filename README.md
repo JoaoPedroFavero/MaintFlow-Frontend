@@ -68,8 +68,9 @@ maintflow-system/
 ### Paleta de Cores
 
 - **Background Dark**: `#202020`
-- **Background Red Buttons**: `#d11d1d`
+- **Background Medium Red**: `#d11d1d`
 - **Background Dark Red**: `#640000`
+- **Background Darkest Red**: `#3a0000`
 - **Text Gray**: `#595959`
 - **Fonte**: Poppins (sans-serif)
 
@@ -81,17 +82,19 @@ maintflow-system/
 
 ### Dashboard
 
-O Dashboard é a área do técnico onde serão gerenciadas as ordens de serviço. Inclui:
-- Menu suspenso com opções de navegação
-- Logo centralizada como background
-- Header com título e botão de logout
+O Dashboard é a área do técnico onde serão gerenciadas as ordens de serviço.
+- Sidebar de navegação com múltiplas seções:
+  - **Clientes**: Cadastrar e Consultar
+  - **Equipamentos**: Nova Ordem, Consultar Ordens e Acompanhar
+  - **Gerenciamento**: Cadastrar e Consultar (com sub-níveis para Condições de Pagamento e Status Ordens)
+
+![Dashboard](imagens_git/dashboard-maintflow.png)
 
 
 ## 🚧 Em Desenvolvimento
 
-- ✅ Página Home com formulário de login
-- ✅ Página Dashboard com menu suspenso (Não completo ainda)
+- ✅ Página Home com formulário de login (falta integração com API)
+- ✅ Página Dashboard com sidebar de navegação e dropdowns multinível (falta integração com API)
 - 🚧 Sistema de autenticação
 - 🚧 Gestão de ordens de serviço
 - 🚧 Relatórios e estatísticas
-

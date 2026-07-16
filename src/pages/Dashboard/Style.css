@@ -1,45 +1,65 @@
+/*-----------------------------------------------------*/
+/* VARIABLES */
+/*-----------------------------------------------------*/
 :root {
-    --background-dark: #202020;
-    --background-red-buttons: #d11d1d;
-    --background-dark-red: #640000;
-    --text-gray:#595959;
+  --background-dark: #202020;
+  --background-medium-red: #d11d1d;
+  --background-dark-red: #640000;
+  --background-darkest-red: #3a0000;
+  --text-gray: #595959;
 }
 
-*{
-    font-family: "Poppins", sans-serif;
+/*-----------------------------------------------------*/
+
+* {
+  font-family: "Poppins", sans-serif;
 }
 
-body{
-    background-color: var(--background-dark);
-    position: relative;
-    min-height: 100vh;
-    margin: 0;
-    width: 100%;
-    overflow-x: hidden;
+body {
+  background-color: var(--background-dark);
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
+
+/*-----------------------------------------------------*/
+/* LOGO */
+/*-----------------------------------------------------*/
 
 #icone-logo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(1.2);
-    opacity: 0.15;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 0.15;
 }
+
+
+/*-----------------------------------------------------*/
+/* TOP CONTAINER */
+/*-----------------------------------------------------*/
 
 .dashboard-top-container {
-    position: relative;
-    display: flex;
-    text-justify: center;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: var(--background-dark-red);
-    width: 100%;
+  position: relative;
+  display: flex;
+  text-justify: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: var(--background-dark-red);
+  width: 100%;
 
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
+
+
+/*-----------------------------------------------------*/
+/* DROPDOWN LOGOUT MENU*/
+/*-----------------------------------------------------*/
 
 .dropdown {
   position: relative;
@@ -53,7 +73,7 @@ body{
   cursor: pointer;
   scale: 5;
   font-weight: bold;
-  color: var(--background-red-buttons);
+  color: var(--background-medium-red);
 }
 
 .dropdown-content {
@@ -62,7 +82,7 @@ body{
   right: 0;
   background-color: white;
   min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -79,6 +99,254 @@ body{
   color: white;
 
   &:hover {
-    background-color: var(--background-red-buttons);
+    background-color: var(--background-medium-red);
+  }
+}
+
+/*-----------------------------------------------------*/
+/* LEFT CONTAINER */
+/*-----------------------------------------------------*/
+
+.sidebar-menu {
+  width: 100%;
+}
+
+.dashboard-left-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  width: 15vw;
+  gap: 10px;
+  padding: 0;
+  background-color: var(--background-medium-red);
+  box-sizing: border-box;
+}
+
+/*-----------------------------------------------------*/
+/* LEFT CONTAINER CLIENTES DROPDOWN */
+/*-----------------------------------------------------*/
+
+.sidebar-clientes-button {
+  background-color: var(--background-medium-red);
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-weight: regular;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+.sidebar-clientes-dropdown {
+  display: none;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar-clientes-dropdown.open {
+  display: block;
+  width: 100%;
+}
+
+.sidebar-clientes-dropdown a {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--background-dark-red);
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/*-----------------------------------------------------*/
+/* LEFT CONTAINER EQUIPAMENTOS DROPDOWN */
+/*-----------------------------------------------------*/
+
+.sidebar-equipamentos-button {
+  background-color: var(--background-medium-red);
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-weight: regular;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+.sidebar-equipamentos-dropdown {
+  display: none;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar-equipamentos-dropdown.open {
+  display: block;
+  width: 100%;
+}
+
+.sidebar-equipamentos-dropdown a {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--background-dark-red);
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/*-----------------------------------------------------*/
+/* LEFT CONTAINER GERENCIAMENTO DROPDOWN */
+/*-----------------------------------------------------*/
+
+.sidebar-gerenciamento-button {
+  background-color: var(--background-medium-red);
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-weight: regular;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+
+}
+
+.sidebar-gerenciamento-first-dropdown {
+  display: none;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sidebar-gerenciamento-first-dropdown.open {
+  display: block;
+  width: 100%;
+}
+
+.sidebar-gerenciamento-first-dropdown a {
+  padding: 12px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--background-dark-red);
+  color: white;
+  font-size: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/*-----------------------------------------------------*/
+/* SECOND LEVEL DROPDOWN BUTTONS */
+/*-----------------------------------------------------*/
+
+.cadastrar-gerenciamento-button,
+.consultar-gerenciamento-button {
+  background-color: var(--background-dark-red);
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  font-weight: regular;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+
+  &:hover{
+    opacity: 0.8;
+  }
+}
+
+
+/*-----------------------------------------------------*/
+/* SECOND LEVEL DROPDOWNS */
+/*-----------------------------------------------------*/
+
+.cadastrar-gerenciamento-second-dropdown,
+.consultar-gerenciamento-second-dropdown {
+  display: none;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cadastrar-gerenciamento-second-dropdown.open,
+.consultar-gerenciamento-second-dropdown.open {
+  display: block;
+  width: 100%;
+}
+
+.cadastrar-gerenciamento-second-dropdown a,
+.consultar-gerenciamento-second-dropdown a {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: none;
+  background-color: var(--background-darkest-red);
+  color: white;
+  font-size: 18px;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: left;
+
+  &:hover {
+    opacity: 0.8;
   }
 }
