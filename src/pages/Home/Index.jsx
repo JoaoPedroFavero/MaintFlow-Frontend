@@ -1,4 +1,5 @@
 `use strict`;
+import { useState } from 'react';
 import connection from '../../services/connection'
 import './Style.css'
 
@@ -6,10 +7,44 @@ import logo from '../../assets/logo.png'
 import iconeLogo from '../../assets/icone-logo.png'
 
 function Home({ onLogin }) {
+  const [usuario, setUsuario] = useState('');
+  const [senha, setSenha] = useState('');
+  const [erro, setErro] = useState('');
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    onLogin()
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setErro('');
+
+    try {
+      const response = await connection.post('/auth/login', {
+        usuario: usuario,
+        senha: senha
+      });
+
+      if (response.status === 200) {
+        onLogin();
+      }
+
+
+
+    } catch (error) {
+      if (error.response) {
+        const status = error.response.status;
+
+        if (status === 404) {
+          setErro('Usuário não encontrado! Tente novamente');
+        } else if (status === 401) {
+          setErro('Senha incorreta! Tente novamente');
+        } else if (status === 400) {
+          setErro('Usuário e senha são obrigatórios');
+        } else {
+          setErro('Erro ao realizar login. Tente novamente.');
+        }
+      } else {
+        setErro('Erro ao conectar com o servidor');
+      }
+      console.error('Erro de login:', error);
+    }
   }
 
   return (
@@ -22,13 +57,23 @@ function Home({ onLogin }) {
 
           <div className="input-group">
             <label>Usuário</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={usuario}
+              onChange={(e) => setUsuario(e.target.value)}
+            />
           </div>
 
           <div className="input-group">
             <label>Senha</label>
-            <input type="password" />
+            <input
+              type="password"
+              value={senha}
+              onChange={(e) => setSenha(e.target.value)}
+            />
           </div>
+
+          {erro && <p className="error-message">{erro}</p>}
 
           <button id="login-button" type="submit">Entrar</button>
           <a id="forgot-pass-link" href="#">Esqueci a senha</a>
@@ -38,4 +83,4 @@ function Home({ onLogin }) {
   )
 }
 
-export default Home
+export default Home;

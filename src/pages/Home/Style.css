@@ -93,3 +93,11 @@ body{
         color: var(--background-red-buttons);
     }
 }
+
+.error-message {
+    color: #d11d1d;
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+}
