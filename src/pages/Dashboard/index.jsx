@@ -1,6 +1,6 @@
 `use strict`;
 import Layout from '../../components/Layout';
-import './Style.css';
+import './style.css';
 import iconeLogo from '../../assets/icone-logo.png'
 
 function Dashboard() {

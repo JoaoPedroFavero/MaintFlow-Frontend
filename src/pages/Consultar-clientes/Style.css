@@ -1,0 +1,143 @@
+/*-----------------------------------------------------*/
+/* VARIABLES */
+/*-----------------------------------------------------*/
+:root {
+    --background-dark: #202020;
+    --background-medium-red: #d11d1d;
+    --background-dark-red: #640000;
+    --background-darkest-red: #3a0000;
+    --text-gray: #595959;
+    --check-green: #00bf63;
+    --check-green-dark: #00a355;
+}
+
+/*-----------------------------------------------------*/
+/* CONSULTAR CLIENTES - Título */
+/*-----------------------------------------------------*/
+
+#consultar-clientes-title {
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+/*-----------------------------------------------------*/
+/* CONSULTAR CLIENTES - Formulário Base */
+/*-----------------------------------------------------*/
+
+.consultar-clientes-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    justify-content: space-between;
+}
+
+/*-----------------------------------------------------*/
+/* CONSULTAR CLIENTES - Linha 1 */
+/*-----------------------------------------------------*/
+
+#consultar-clientes-row-1 {
+    display: flex;
+    gap: 1rem;
+}
+
+#consultar-clientes-row-1 input {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid var(--text-gray);
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+/*-----------------------------------------------------*/
+/* CONSULTAR CLIENTES - Linha 2 */
+/*-----------------------------------------------------*/
+
+#consultar-clientes-row-2 {
+    display: flex;
+    gap: 1rem;
+}
+
+#consultar-clientes-row-2 input {
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid var(--text-gray);
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.2rem;   
+
+    &:focus {
+        outline: none;
+    }
+
+    &:has(select) {
+        color: var(--text-gray);
+    }
+}
+
+#select-tipo-cliente{
+    flex: 1;
+    background-color: transparent;
+    border: 1px solid var(--text-gray);
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.2rem;   
+     
+    &:focus {
+        outline: none;
+    }
+}
+
+#select-tipo-cliente option{
+    flex: 1;
+    background-color: var(--background-dark);
+    border: 1px solid var(--text-gray);
+    padding: 0.5rem;
+    color: white;
+    font-size: 1.2rem;   
+     
+    &:focus {
+        outline: none;
+    }
+}
+
+#select-tipo-cliente option[value=""] {
+    color: var(--text-gray);
+}
+
+/*-----------------------------------------------------*/
+/* CONSULTAR CLIENTES - Linha 3 - BOTÃO */
+/*-----------------------------------------------------*/
+
+#consultar-clientes-row-3{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#consultar-clientes-row-3 button {
+    background-color: var(--check-green);
+    border: none;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    min-width: auto;
+    min-height: auto;
+    width: 15rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}

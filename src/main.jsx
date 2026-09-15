@@ -2,10 +2,10 @@ import React, { useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import './index.css' //CSS da Main.jsx
-import Home from './pages/Home/Index.jsx'
+import Home from './pages/Home/index.jsx'
 import Dashboard from './pages/Dashboard/index.jsx'
-import CadastrarClientes from './pages/Cadastrar-clientes/Index.jsx'
-import ConsultarClientes from './pages/Consultar-clientes/Index.jsx'
+import CadastrarClientes from './pages/Cadastrar-clientes/index.jsx'
+import ConsultarClientes from './pages/Consultar-clientes/index.jsx'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)

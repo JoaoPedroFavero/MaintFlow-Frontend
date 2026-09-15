@@ -1,7 +1,7 @@
 `use strict`;
 import { useState } from 'react';
 import connection from '../../services/connection'
-import './Style.css'
+import './style.css'
 
 import logo from '../../assets/logo.png'
 import iconeLogo from '../../assets/icone-logo.png'
@@ -11,7 +11,7 @@ function Home({ onLogin }) {
   const [senha, setSenha] = useState('');
   const [erro, setErro] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmitLogin = async (e) => {
     e.preventDefault();
     setErro('');
 
@@ -24,8 +24,6 @@ function Home({ onLogin }) {
       if (response.status === 200) {
         onLogin();
       }
-
-
 
     } catch (error) {
       if (error.response) {
@@ -52,7 +50,7 @@ function Home({ onLogin }) {
       <img id="icone-logo" src={iconeLogo} alt="Ícone Logo" />
       <div className="login-container">
 
-        <form className="login-form" onSubmit={handleSubmit}>
+        <form className="login-form" onSubmit={handleSubmitLogin}>
           <img src={logo} alt="Logo" />
 
           <div className="input-group">

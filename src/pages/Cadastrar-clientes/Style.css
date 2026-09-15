@@ -53,6 +53,10 @@
   padding: 0.5rem;
   color: white;
   font-size: 1.2rem;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 /*-----------------------------------------------------*/
@@ -72,6 +76,10 @@
   padding: 0.5rem;
   color: white;
   font-size: 1.2rem;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 /*-----------------------------------------------------*/
@@ -91,6 +99,10 @@
   padding: 0.5rem;
   color: white;
   font-size: 1.2rem;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 /*-----------------------------------------------------*/
@@ -110,6 +122,10 @@
   padding: 0.5rem;
   color: white;
   font-size: 1.2rem;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 /*-----------------------------------------------------*/
@@ -152,12 +168,12 @@
 }
 
 input[type="number"] {
-    appearance: textfield;
-    -moz-appearance: textfield;
+  appearance: textfield;
+  -moz-appearance: textfield;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
